@@ -18,10 +18,10 @@ npm run preview
 
 ## GitHub Pages
 
-1. Settings → Pages → Source: **GitHub Actions**
-2. Пуш в `main` → workflow `.github/workflows/deploy.yml` собирает и деплоит `dist`
-3. `base` в `vite.config.ts` = `/nko-seven-color/` (имя репозитория)
-4. Роутер: `createWebHistory` + `public/404.html` fallback для дочерних путей
-5. Якоря секций (`#services`, `#contacts`) работают нативно
+1. Repo **Settings → Pages → Source: GitHub Actions**
+2. Пуш в `master` (или `main`) → workflow деплоит `dist`
+3. CI сам ставит `VITE_BASE=/${{ github.event.repository.name }}/` → для этого репо `/nko-seven/`
+4. URL: `https://tartecz.github.io/nko-seven/`
+5. `public/404.html` — SPA fallback для дочерних путей
 
-Если репозиторий называется иначе — поменяй `base` в `vite.config.ts` и путь в `public/404.html`.
+Если Pages ещё не включал: после первого успешного workflow сайт появится сам.

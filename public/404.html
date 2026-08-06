@@ -4,12 +4,14 @@
     <meta charset="utf-8" />
     <title>Семицветик</title>
     <script>
-      // GitHub Pages SPA fallback: /nko-seven-color/foo → /nko-seven-color/?p=/foo
+      // GitHub Pages SPA fallback for project site
       sessionStorage.setItem(
         'gh-pages-redirect',
         location.pathname + location.search + location.hash,
       )
-      location.replace('/nko-seven-color/')
+      var parts = location.pathname.split('/').filter(Boolean)
+      var base = parts.length ? '/' + parts[0] + '/' : '/'
+      location.replace(base)
     </script>
   </head>
   <body></body>

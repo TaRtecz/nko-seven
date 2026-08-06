@@ -3,9 +3,11 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import tailwindcss from '@tailwindcss/vite'
 
-// GitHub Pages: base = '/<repo-name>/'
+// Local: /nko-seven/ ; CI: VITE_BASE из имени репозитория
+const base = process.env.VITE_BASE ?? '/nko-seven/'
+
 export default defineConfig({
-  base: '/nko-seven-color/',
+  base,
   plugins: [vue(), tailwindcss()],
   resolve: {
     alias: {

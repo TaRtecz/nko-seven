@@ -1,0 +1,10 @@
+---
+alwaysApply: true
+---
+
+Implement high-end, butter-smooth animations using GSAP or @vueuse/motion.
+Focus on:
+- Scroll-triggered reveals (staggered fade-ins, slide-ups) for text and cards.
+- Subtle parallax effects for background elements and images.
+- Micro-interactions (magnetic hover effects on buttons, scale transforms on cards).
+Rule: Only animate `transform` and `opacity` properties to maintain 60fps. Ensure animations gracefully degrade on mobile devices.

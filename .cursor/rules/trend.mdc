@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+---
+
+Design with cutting-edge web aesthetics.
+Strictly apply the following UI patterns:
+- Bento box grid layouts for feature/service sections.
+- Subtle glassmorphism (using Tailwind's backdrop-blur) for floating navbars or overlaid cards.
+- Mesh gradients or glowing blurred orbs for hero section backgrounds.
+- Generous macro and micro whitespace (use large Tailwind gap, py, and px utilities).
+Typography: Use strong contrast, large bold headings, and clean sans-serif fonts.

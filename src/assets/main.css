@@ -1,0 +1,91 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Unbounded', ui-sans-serif, system-ui, sans-serif;
+
+  --color-forest: #1a4a3a;
+  --color-forest-deep: #0f2f26;
+  --color-sand: #f7f3ec;
+  --color-cream: #fffcf7;
+  --color-coral: #e76f51;
+  --color-peach: #f4a261;
+  --color-sun: #e9c46a;
+  --color-teal: #2a9d8f;
+  --color-mist: #a8dadc;
+  --color-sky: #457b9d;
+  --color-ink: #1c2b26;
+  --color-muted: #5c6b64;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-teal ring-offset-2 ring-offset-cream;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tap-target {
+    @apply min-h-11 min-w-11;
+  }
+}
+
+@keyframes mesh-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(2%, -3%, 0) scale(1.05);
+  }
+  66% {
+    transform: translate3d(-3%, 2%, 0) scale(0.98);
+  }
+}
+
+.mesh-orb {
+  animation: mesh-drift 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+.mesh-orb-delay-1 {
+  animation-delay: -4s;
+}
+
+.mesh-orb-delay-2 {
+  animation-delay: -8s;
+}
+
+.mesh-orb-delay-3 {
+  animation-delay: -12s;
+}

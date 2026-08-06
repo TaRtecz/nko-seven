@@ -1,0 +1,8 @@
+---
+alwaysApply: true
+---
+
+Act as an expert frontend developer and UI/UX designer.
+Write code exclusively using Vue 3 (Composition API with <script setup>), Nuxt, and strict TypeScript.
+Use Tailwind CSS for all styling. Never use raw CSS/SCSS unless explicitly asked.
+Organize the landing page into modular, highly reusable components. Ensure clean architecture and maintain strictly typed props and emits.

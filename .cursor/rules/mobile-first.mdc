@@ -1,0 +1,8 @@
+---
+alwaysApply: true
+---
+
+Follow a strict mobile-first approach using Tailwind's responsive prefixes (sm:, md:, lg:, xl:).
+Ensure the layout is completely fluid and flawless on all screen sizes. 
+Pay special attention to mobile navigation (smooth drawer/hamburger menu) and ensure all clickable elements have touch-friendly tap targets (min 44x44px).
+Output clean, semantic HTML5 tags (<header>, <section>, <main>, <article>) for perfect SEO and accessibility.
